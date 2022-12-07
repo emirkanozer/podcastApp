@@ -1,3 +1,5 @@
+import { IPodcast } from './../../interfaces/podcasts';
+import { HttpService } from './../../services/http.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PodcastComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http:HttpService) { }
 
-  ngOnInit(): void {
+  podcast!:IPodcast;
+  async ngOnInit() {
+    this.podcast = await this.http.getPodcasts();
   }
 
 }

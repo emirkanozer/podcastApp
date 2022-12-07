@@ -1,1 +1,16 @@
-<p>podcast works!</p>
+<div class="wrapper">
+  <div class="card" *ngFor="let item of podcast.items">
+    <div class="card-img">
+      <img src="{{ item.itunes_image.href }}" alt="" />
+    </div>
+    <div class="texts">
+      <div class="card-header">
+        {{ item.title }}
+      </div>
+      <div class="card-desc">
+        {{ item.description | summary }}
+        <span> </span>
+      </div>
+    </div>
+  </div>
+</div>
