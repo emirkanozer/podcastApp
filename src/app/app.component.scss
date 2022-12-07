@@ -4,18 +4,20 @@
   height: 100vh;
 }
 
-.container{
-  height: 90vh;
-}
+
 .main{
   display: flex;
   flex-direction: column;
-  width: calc(100vw - 30vw);
+  max-width: 100%;
 }
 .player{
   height: calc(100vh - 90vh);
 }
 .content{
+  padding: 1rem 1rem;
   height: 80vh;
   overflow-y:auto;
+  max-height: 100%;
+  background-color: rgba(15,15,15,1);
+  color: white;
 }

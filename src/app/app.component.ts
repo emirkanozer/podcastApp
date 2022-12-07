@@ -8,14 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  podcasts:IPodcasts[]=[];
-  podcast:IPodcast[];
+
   constructor(private http: HttpService) {
-    this.http.getPodcasts();
-    this.podcast=this.http.podcasts;
-    console.log(this.podcast)
   }
-  ngOnInit() {
+
+  podcast!: IPodcast;
+
+  async ngOnInit() {
+    this.podcast = await this.http.getPodcasts();
+    console.log(this.podcast.items)
   }
 
 }

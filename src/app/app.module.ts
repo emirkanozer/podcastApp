@@ -10,6 +10,8 @@ import { PodcastComponent } from './components/podcast/podcast.component';
 import { PodcastDetailComponent } from './components/podcast-detail/podcast-detail.component';
 import { PlayerComponent } from './components/player/player.component';
 import { UserInfoComponent } from './components/user-info/user-info.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SummaryPipe } from './pipes/summary.pipe';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,14 @@ import { UserInfoComponent } from './components/user-info/user-info.component';
     PodcastComponent,
     PodcastDetailComponent,
     PlayerComponent,
-    UserInfoComponent
+    UserInfoComponent,
+    SummaryPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule,
   ],
   providers: [
   ],
