@@ -10,16 +10,11 @@ import { Parse } from 'rss-to-json';
 export class HttpService {
 
   constructor(private http: HttpClient) {
-    this.podcasts=[];
   }
 
-  podcasts:IPodcast[];
-
-  getPodcasts() {
-     const url = 'https://anchor.fm/s/98e888/podcast/rss';
-    Parse(url).then(e => {
-      this.podcasts.push(e);
-    })
+  async getPodcasts() {
+    return await Parse('https://anchor.fm/s/98e888/podcast/rss');
   }
+
 }
 
