@@ -1,9 +1,17 @@
 <div class="wrapper">
   <div class="search">
-    <img src="search.png" alt="search" />
-    <input type="text" placeholder="Search..." />
+    <form>
+      <button>
+        <fa-icon [icon]="faSearch"></fa-icon>
+      </button>
+      <div class="search-input">
+        <input type="text" placeholder="Search..." />
+      </div>
+    </form>
   </div>
   <div class="icon">
-    <img src="user" class="icons" alt="userimg" />
+    <button>
+      <fa-icon [icon]="faUser"></fa-icon>
+    </button>
   </div>
 </div>
