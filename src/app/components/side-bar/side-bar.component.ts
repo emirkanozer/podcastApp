@@ -9,13 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideBarComponent implements OnInit {
 
-  podcast:IPodcast[];
   constructor(private http:HttpService) {
-    this.podcast=this.http.podcasts;
   }
 
-
-  ngOnInit(): void {
+  podcast!:IPodcast;
+  async ngOnInit() {
+    this.podcast = await this.http.getPodcasts();
   }
 
 }
