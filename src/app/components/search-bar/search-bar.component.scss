@@ -1,0 +1,19 @@
+.wrapper{
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search{
+  input{
+    width: 20rem;
+    padding: 0.5rem 1rem;
+    // border-radius: 1rem;
+  }
+}
+
+.icons {
+  padding-left: 25px;
+  background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+  background-size: 20px;
+}

@@ -19,7 +19,6 @@ export class HttpService {
      const url = 'https://anchor.fm/s/98e888/podcast/rss';
     Parse(url).then(e => {
       this.podcasts.push(e);
-      console.log(this.podcasts)
     })
   }
 }

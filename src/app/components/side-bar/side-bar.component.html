@@ -1,1 +1,16 @@
-<p>side-bar works!</p>
+<div class="side-bar">
+  <div class="side-bar-logo">
+    <a href="">PodcastApp</a>
+  </div>
+  <div class="side-bar-items">
+    <a href="">home</a>
+    <a href="">categories</a>
+    <a href="">favourites</a>
+    <a href="">playlist</a>
+    <a href="">premium</a>
+  </div>
+
+  <div class="card" *ngFor="let item of podcast">
+    <img src="{{ item.image }}" alt="" />
+  </div>
+</div>

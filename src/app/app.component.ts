@@ -1,4 +1,4 @@
-import { IPodcast } from './interfaces/podcasts';
+import { IPodcast, IPodcasts } from './interfaces/podcasts';
 import { HttpService } from './services/http.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  podcasts:IPodcasts[]=[];
+  podcast:IPodcast[];
   constructor(private http: HttpService) {
     this.http.getPodcasts();
     this.podcast=this.http.podcasts;
+    console.log(this.podcast)
   }
-  podcast:IPodcast[];
   ngOnInit() {
   }
 

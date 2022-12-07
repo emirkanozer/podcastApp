@@ -1,3 +1,5 @@
+import { IPodcast } from './../../interfaces/podcasts';
+import { HttpService } from './../../services/http.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideBarComponent implements OnInit {
 
-  constructor() { }
+  podcast:IPodcast[];
+  constructor(private http:HttpService) {
+    this.podcast=this.http.podcasts;
+  }
+
 
   ngOnInit(): void {
   }

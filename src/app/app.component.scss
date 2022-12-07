@@ -1,0 +1,21 @@
+:host{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container{
+  height: 90vh;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  width: calc(100vw - 30vw);
+}
+.player{
+  height: calc(100vh - 90vh);
+}
+.content{
+  height: 80vh;
+  overflow-y:auto;
+}

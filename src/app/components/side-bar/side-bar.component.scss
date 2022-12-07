@@ -1,0 +1,23 @@
+.side-bar{
+  float: left;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(84,184,224);
+  width: 15vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  &-items{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.card{
+  width: 12rem;
+  height: 12rem;
+  img{
+    border-radius: 1rem;
+    width: 100%;
+  }
+}
