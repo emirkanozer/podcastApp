@@ -12,7 +12,7 @@ export interface IPodcasts{
   description:string;
   enclosures:Array<IEnclosures>;
   duration:string;
-  image:IItunesImage;
+  itunes_image:IItunesImage;
   title:string;
 }
 
