@@ -9,14 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
+  podcasts: any[] = []
+
   constructor(private http: HttpService) {
+    this.http.podcasts$.subscribe(res => {
+      this.podcasts = res
+
+      console.log(this.podcasts)
+
+    } )
   }
 
-  podcast!: IPodcast;
 
-  async ngOnInit() {
-    this.podcast = await this.http.getPodcasts();
-    console.log(this.podcast.items)
+  ngOnInit() {
   }
 
 }

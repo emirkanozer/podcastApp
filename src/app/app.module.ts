@@ -13,6 +13,7 @@ import { UserInfoComponent } from './components/user-info/user-info.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SummaryPipe } from './pipes/summary.pipe';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,7 @@ import { SummaryPipe } from './pipes/summary.pipe';
     PodcastDetailComponent,
     PlayerComponent,
     UserInfoComponent,
-    SummaryPipe
+    SummaryPipe,
   ],
   imports: [
     BrowserModule,
