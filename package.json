@@ -23,6 +23,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.2.1",
     "@fortawesome/free-regular-svg-icons": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "ang11-music-player": "^0.0.0",
     "bootstrap": "^5.2.3",
     "font-awesome": "^4.7.0",
     "rxjs": "~7.5.0",
