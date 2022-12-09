@@ -1,14 +1,86 @@
-<div class="side-bar">
-  <div class="side-bar-logo">
-    <a href="">PodcastApp</a>
+<div class="side" *ngIf="sideClass; else collapseSideBar">
+  <div class="side-bar">
+    <div class="collapse" (click)="sideBar()">
+      <button>
+        <fa-icon [icon]="faArrowLeft"></fa-icon>
+      </button>
+    </div>
+    <div class="side-bar-top">
+      <div class="items" [routerLink]="['']">
+        <div class="items-icon">
+          <fa-icon [icon]="faHome"></fa-icon>
+        </div>
+        <div>
+          <a>Home</a>
+        </div>
+      </div>
+      <div class="items" [routerLink]="['detail']">
+        <div class="items-icon">
+          <fa-icon [icon]="faSearch"></fa-icon>
+        </div>
+        <a>Search</a>
+      </div>
+      <div class="items" [routerLink]="['']">
+        <div class="items-icon">
+          <fa-icon [icon]="faPodcast"></fa-icon>
+        </div>
+        <div>
+          <a>Podcast</a>
+        </div>
+      </div>
+      <div class="items" [routerLink]="['']">
+        <div class="items-icon">
+          <fa-icon [icon]="faHeart"></fa-icon>
+        </div>
+        <div>
+          <a>Saved</a>
+        </div>
+      </div>
+      <div class="items" [routerLink]="['']">
+        <div class="items-icon">
+          <fa-icon [icon]="faUser"></fa-icon>
+        </div>
+        <div>
+          <a>User</a>
+        </div>
+      </div>
+    </div>
+    <div class="side-bar-center"></div>
+    <div class="side-bar-bottom"></div>
   </div>
-  <div class="side-bar-items">
-    <a href="">home</a>
-    <a href="">categories</a>
-    <a href="">favourites</a>
-    <a href="">playlist</a>
-    <a href="">premium</a>
-  </div>
-
-  <div class="card"></div>
 </div>
+
+<ng-template #collapseSideBar>
+  <div class="side-collapse">
+    <div class="collapse" (click)="sideBar()">
+      <button>
+        <fa-icon [icon]="faArrowRight"></fa-icon>
+      </button>
+    </div>
+    <div class="items" [routerLink]="['']">
+      <div class="items-icon">
+        <fa-icon [icon]="faHome"></fa-icon>
+      </div>
+    </div>
+    <div class="items" [routerLink]="['detail']">
+      <div class="items-icon">
+        <fa-icon [icon]="faSearch"></fa-icon>
+      </div>
+    </div>
+    <div class="items" [routerLink]="['']">
+      <div class="items-icon">
+        <fa-icon [icon]="faPodcast"></fa-icon>
+      </div>
+    </div>
+    <div class="items" [routerLink]="['']">
+      <div class="items-icon">
+        <fa-icon [icon]="faHeart"></fa-icon>
+      </div>
+    </div>
+    <div class="items" [routerLink]="['']">
+      <div class="items-icon">
+        <fa-icon [icon]="faUser"></fa-icon>
+      </div>
+    </div>
+  </div>
+</ng-template>
