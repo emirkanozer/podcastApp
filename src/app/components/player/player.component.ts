@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { PlayerService } from './../../services/player.service.ts.service';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-player',
@@ -6,8 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./player.component.scss']
 })
 export class PlayerComponent implements OnInit {
+  @ViewChild('audioPlayer') audio!: ElementRef
 
-  constructor() { }
+  constructor(public playerService: PlayerService) {
+    this.playerService.isPlaying$.subscribe(res => {
+
+      if (this.playerService.audioSrc) {
+        this.audio.nativeElement.load()
+        this.audio.nativeElement.play()
+
+      }
+    })
+   }
 
   ngOnInit(): void {
   }

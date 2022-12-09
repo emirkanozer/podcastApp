@@ -1,6 +1,21 @@
-<div class="bottom">
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste adipisci magnam
-  laudantium iusto aliquam deleniti, temporibus alias labore exercitationem
-  repellat officiis aspernatur quae nisi itaque cum saepe accusamus vitae
-  distinctio.
+<div class="wrapper" *ngIf="playerService.audioSrc; else player">
+  <audio #audioPlayer controls autoplay>
+    <source
+      [src]="playerService.audioSrc?.enclosures[0].url"
+      [type]="playerService.audioSrc?.enclosures[0].type"
+    />
+    Your browser does not support the audio element.
+  </audio>
 </div>
+
+<ng-template #player>
+  <div class="wrapper">
+    <audio #audioPlayer controls autoplay>
+      <source
+        [src]="playerService.audioSrc?.enclosures[0].url"
+        [type]="playerService.audioSrc?.enclosures[0].type"
+      />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+</ng-template>
