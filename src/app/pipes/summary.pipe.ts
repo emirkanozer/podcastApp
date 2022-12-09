@@ -8,7 +8,7 @@ export class SummaryPipe implements PipeTransform {
   transform(value: string, limit?:number) {
     if(!value) return null;
 
-    limit = limit? limit:50;
+    limit = limit? limit:40;
 
     if(limit > value.length){
         return value;
