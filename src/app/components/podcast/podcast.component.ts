@@ -1,3 +1,4 @@
+import { PlayerService } from './../../services/player.service.ts.service';
 import { IPodcast } from './../../interfaces/podcasts';
 import { HttpService } from './../../services/http.service';
 import { Component, OnInit } from '@angular/core';
@@ -9,11 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PodcastComponent implements OnInit {
 
-  constructor(private http:HttpService) { }
+  constructor(public http:HttpService, private playerService: PlayerService) { }
 
-  podcast!:IPodcast;
-  async ngOnInit() {
-    this.podcast = await this.http.getPodcasts();
+  async ngOnInit() {  }
+
+
+  onClick(podcast: any) {
+    this.playerService.audioSrc = podcast.items[0]
+    this.playerService.play()
+
   }
 
 }

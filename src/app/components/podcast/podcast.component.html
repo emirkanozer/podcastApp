@@ -1,15 +1,19 @@
 <div class="wrapper">
-  <div class="card" *ngFor="let item of podcast.items">
+  <div
+    routerLink="detail"
+    class="card"
+    *ngFor="let item of http.podcasts$ | async"
+    (click)="onClick(item)"
+  >
     <div class="card-img">
-      <img src="{{ item.itunes_image.href }}" alt="" />
+      <img src="{{ item.image }}" alt="" />
     </div>
     <div class="texts">
       <div class="card-header">
-        {{ item.title }}
+        {{ item.title | summary : 17 }}
       </div>
       <div class="card-desc">
         {{ item.description | summary }}
-        <span> </span>
       </div>
     </div>
   </div>
