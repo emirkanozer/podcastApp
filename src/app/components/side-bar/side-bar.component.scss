@@ -12,11 +12,11 @@
 
   &-collapse{
     background-color: black;
-    height: 100%;
+    height: 100vh;
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
   }
   &-bar{
     justify-content: space-around;

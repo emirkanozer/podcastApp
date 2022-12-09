@@ -1,7 +1,7 @@
 import { PlayerService } from './../../services/player.service.ts.service';
 import { IPodcast } from './../../interfaces/podcasts';
 import { HttpService } from './../../services/http.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-podcast',
@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PodcastComponent implements OnInit {
 
+  @Input() item!:IPodcast;
   constructor(public http:HttpService, private playerService: PlayerService) { }
 
   async ngOnInit() {  }

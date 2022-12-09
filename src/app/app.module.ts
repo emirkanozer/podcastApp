@@ -12,6 +12,7 @@ import { PlayerComponent } from './components/player/player.component';
 import { UserInfoComponent } from './components/user-info/user-info.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SummaryPipe } from './pipes/summary.pipe';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { SummaryPipe } from './pipes/summary.pipe';
     PlayerComponent,
     UserInfoComponent,
     SummaryPipe,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

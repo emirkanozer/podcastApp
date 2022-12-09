@@ -1,10 +1,5 @@
 <div class="wrapper">
-  <div
-    routerLink="detail"
-    class="card"
-    *ngFor="let item of http.podcasts$ | async"
-    (click)="onClick(item)"
-  >
+  <div class="card" routerLink="detail" (click)="onClick(item)">
     <div class="card-img">
       <img src="{{ item.image }}" alt="" />
     </div>

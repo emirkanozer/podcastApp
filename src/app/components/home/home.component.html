@@ -1,0 +1,4 @@
+<app-podcast
+  *ngFor="let item of http.podcasts$ | async"
+  [item]="item"
+></app-podcast>

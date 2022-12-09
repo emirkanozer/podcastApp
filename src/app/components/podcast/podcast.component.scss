@@ -1,12 +1,3 @@
-.wrapper{
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-gap: 1.2rem 0.6rem;
-  grid-template-columns: repeat(auto-fit,minmax(12rem, max-content));
-  justify-content: center;
-}
-
 .card{
   padding: 1rem;
   display: flex;
